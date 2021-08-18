@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Memory Game</title>
@@ -8,33 +9,36 @@
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
 
     <div class="container">
-        <header>
-            <h1>Memory Game</h1>
-        </header>
-        <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-        	</ul>
-        	<span class="moves">0</span> Move(s)
+        <h1>Memory Game</h1>
+        <div>Countdown: <span class="countdown"></span></div>
+        <div>Max Moves: <span class="max-moves">0</span></div>
+        
 
-            <div class="timer">
+        <section class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <span class="moves">0</span> Move(s)
+
+            <div class="timer" id = "tim">
             </div>
 
             <div class="restart" onclick=startGame()>
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
         </section>
 
         <ul class="deck" id="card-deck">
@@ -43,14 +47,14 @@
         <div id="popup1" class="overlay">
             <div class="popup">
                 <h2>Congratulations</h2>
-                <a class="close" href=# >×</a>
+                <a class="close" href=#>×</a>
                 <div class="content-1">
                     Congratulations you're a winner
                 </div>
                 <div class="content-2">
                     <p>You made <span id=finalMove> </span> moves </p>
                     <p>in <span id=totalTime> </span> </p>
-                    <p>Rating:  <span id=starRating></span></p>
+                    <p>Rating: <span id=starRating></span></p>
                 </div>
                 <button id="next-level-up" onclick="nextLevelUp()">
                     Next Level Up</a>
@@ -61,4 +65,5 @@
     </div>
     <script src="js/app.js"></script>
 </body>
+
 </html>
