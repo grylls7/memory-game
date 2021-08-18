@@ -1,5 +1,5 @@
 let card = document.getElementsByClassName("card");
-// if (!localStorage.getItem('l'))
+if (!localStorage.getItem('l'))
     localStorage.setItem('l', JSON.stringify(1));
 let level = localStorage.getItem('l');
 
